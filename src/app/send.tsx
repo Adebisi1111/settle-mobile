@@ -1,70 +1,88 @@
-import { router } from "expo-router";
+import { useState } from "react";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
 
-export default function Login() {
+export default function SendScreen() {
+  const [recipient, setRecipient] = useState("");
+  const [amount, setAmount] = useState("");
+
   return (
     <View
       style={{
         flex: 1,
         backgroundColor: "#0f172a",
-        justifyContent: "center",
         padding: 24,
+        paddingTop: 80,
       }}
     >
       <Text
         style={{
           color: "white",
-          fontSize: 34,
+          fontSize: 30,
           fontWeight: "bold",
-          marginBottom: 10,
+          marginBottom: 30,
         }}
       >
-        Welcome Back
+        Send Money
       </Text>
 
       <Text
         style={{
-          color: "#b8c1ec",
+          color: "white",
+          marginBottom: 8,
           fontSize: 16,
-          marginBottom: 40,
         }}
       >
-        Login to continue using Settle
+        Recipient
       </Text>
 
       <TextInput
-        placeholder="Email"
+      value={recipient}
+onChangeText={setRecipient}
+        placeholder="Enter wallet address"
         placeholderTextColor="#94a3b8"
         style={{
           backgroundColor: "#1e293b",
           color: "white",
-          padding: 16,
+          padding: 18,
           borderRadius: 14,
           marginBottom: 20,
-          fontSize: 16,
         }}
       />
 
+      <Text
+        style={{
+          color: "white",
+          marginBottom: 8,
+          fontSize: 16,
+        }}
+      >
+        Amount
+      </Text>
+
       <TextInput
-        placeholder="Password"
+      value={amount}
+onChangeText={setAmount}
+        placeholder="$0.00"
         placeholderTextColor="#94a3b8"
-        secureTextEntry
+        keyboardType="numeric"
         style={{
           backgroundColor: "#1e293b",
           color: "white",
-          padding: 16,
+          padding: 18,
           borderRadius: 14,
           marginBottom: 30,
-          fontSize: 16,
         }}
       />
 
       <TouchableOpacity
-        onPress={() => router.push("/dashboard")}
+      onPress={() => {
+  console.log("Wallet Address:", recipient);
+  console.log("Amount:", amount);
+}}
         style={{
           backgroundColor: "#2563eb",
-          paddingVertical: 18,
-          borderRadius: 14,
+          padding: 20,
+          borderRadius: 16,
           alignItems: "center",
         }}
       >
@@ -75,9 +93,11 @@ export default function Login() {
             fontWeight: "bold",
           }}
         >
-          Login
+          Continue
+          
         </Text>
       </TouchableOpacity>
+      
     </View>
   );
 }
