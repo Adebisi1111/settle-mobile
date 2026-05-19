@@ -1,52 +1,68 @@
-# Settle Mobile
+# 💸 Settle AI
 
-Simple USDC payment app built on Arc Network.
+Settle AI is a smart mobile app that helps users create payment requests using simple natural language.
 
-## Features
-- Send USDC payments
-- Wallet integration
-- Arc Testnet support
-- Circle smart contract integration
-- Transaction monitoring
+---
 
-## Tech Stack
-- React Native
-- Expo
-- TypeScript
-- Circle SDK
-- Arc Network
+## 🚀 What I built so far
 
-## Project Structure
+- Input system for payment requests
+- Smart logic to detect amounts
+- Split payment calculation
+- Clean mobile UI (React Native)
 
-```bash
-src/
-  app/
-    index.tsx
-    login.tsx
-    dashboard.tsx
-    send.tsx
-```
+---
 
-## Setup
+## 🧠 How it works
 
-Install dependencies:
+Users can type things like:
 
-```bash
-npm install
-```
+Split $50 dinner between 5 people
 
-Start the app:
+And the app will return:
 
-```bash
-npx expo start
-```
+💸 Dinner: $10 each
 
-## Current Progress
-- Wallet created on Arc Testnet
-- ERC-20 contract deployed
-- Token minting completed
-- Event monitoring configured
-- UI screens created
+---
 
-## Author
+## 🛠️ Tech Stack
+
+- React Native (Expo)
+- JavaScript
+
+---
+
+## 📌 Progress
+
+Day 1:
+- App setup
+- Basic UI
+- Input handling
+
+Day 2:
+- Smart logic added
+- Split calculation
+- UI improvements
+
+---
+
+## 🎯 Goal
+
+To build a smart fintech app that simplifies:
+- group payments  
+- shared expenses  
+- quick requests  
+
+---
+
+## 🔮 Next Steps
+
+- Add welcome/splash screen
+- Improve UI design
+- Add real AI (later)
+- Wallet integration (future)
+
+---
+
+👤 Author
 Adebisi1111
